@@ -54,7 +54,7 @@ exports.daftarB = (prefix) => {
         return `──「 BELUM REGISTER 」──\nHalo kak !\nKamu belum Register nih, register dulu yuk... \n\nCommand : ${prefix}register nama|umur\nContoh : ${prefix}register Nazwa|16`
 }
 
-exports.daftarD = () => {
+exports.rediregis = () => {
         return `*「 SUDAH REGISTER 」*\n\n*kamu sudah register di database bot*`
 }
 

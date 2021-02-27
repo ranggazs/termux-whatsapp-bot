@@ -105,10 +105,18 @@ Example:
 "ownerNumbers": "12542123926@s.whatsapp.net",
 ```
 - If you Want to Change language to English, Change ```languages``` with ```eng```
-Example:
+(Coming soon)
+<!--Example:
 ```bash
 "languages": "eng",
-```
+```-->
+
+---
+
+But you can change language on [this section](https://github.com/NazwaS/termux-whatsapp-bot/blob/main/nzwa.js#L92)
+
+---
+
 - Change ```botPrefix``` with your prefix
 Example:
 ```bash

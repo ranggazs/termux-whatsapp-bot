@@ -2162,6 +2162,74 @@ async function starts() {
                                         nzwa.sendMessage(from, buffer, image, {quoted: mek, caption: 'Nih kak logonya...'})
                                         await limitAdd(sender)
                                         break
+
+case 'triggered':
+					case 'ger':
+ if (!isRegister) return reply(botLangs.daftarB())
+           if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+           ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+           reply(mess.wait)
+         owgi = await Lxa.downloadAndSaveMediaMessage(ger)
+           anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
+        teks = `${anu.display_url}`
+         ranp = getRandom('.gif')
+        rano = getRandom('.webp')
+        anu1 = `https://some-random-api.ml/canvas/triggered?avatar=${teks}`
+       exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+                                                fs.unlinkSync(ranp)
+                                                if (err) return reply(mess.error.stick)
+                                                nobg = fs.readFileSync(rano)
+                                                Lxa.sendMessage(from, nobg, sticker, {quoted: mek})
+                                                fs.unlinkSync(rano)
+                                        })
+                                    
+                                             } else {
+                                                 reply('Gunakan foto!')
+                                          }
+                                             break
+
+
+case 'tourl':
+ if (!isRegister) return reply(botLangs.daftarB())
+           if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+           ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+           reply(mess.wait)
+         owgi = await Lxa.downloadAndSaveMediaMessage(ger)
+           anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
+        teks = `${anu.display_url}`
+reply(teks)
+}
+break
+
+//---stiker wasted
+case 'wasted':
+  case 'was':
+if (!isRegister) return reply(botLangs.daftarB())
+var imgbb = require('imgbb-uploader')
+if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+  ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
+  reply(mess.wait)
+  owgi = await Lxa.downloadAndSaveMediaMessage(ger)
+  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
+  teks = `${anu.display_url}`
+  ranp = getRandom('.gif')
+  rano = getRandom('.webp')
+  anu1 = `https://some-random-api.ml/canvas/wasted?avatar=${teks}`
+  exec(`wget ${anu1} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+fs.unlinkSync(ranp)
+if (err) return reply(mess.error.stick)
+nobg = fs.readFileSync(rano)
+Lxa.sendMessage(from, nobg, sticker, {
+  quoted: mek
+})
+fs.unlinkSync(rano)
+  })
+
+} else {
+  reply('Gunakan foto!')
+}
+break
+
                                 /*case 'jadwaltvnow':  
 				if (!isRegister) return reply(botLangs.daftarB())
                                reply(botLangs.wait())

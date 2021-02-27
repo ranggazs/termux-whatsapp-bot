@@ -77,8 +77,7 @@ const badword = JSON.parse(fs.readFileSync('./database/json/badword.json'))
 */
 
 const option = JSON.parse(fs.readFileSync('./options/option.json'))
-const { ind } = require('./options/language')
-const { eng } = require('./options/language')
+const { ind, eng } = require('./options/language')
 const {
     botName,
     ownerName,
@@ -89,6 +88,8 @@ const {
     memberLimitss,
     userDefaultLimit
 } = option
+//const botLangs = languages
+const botLangs = ind
 
 // Load Menu File
 const { help } = require('./database/menu/help')
@@ -445,7 +446,6 @@ async function starts() {
                         const isAntiLink = isGroup ? antilink.includes(from) : false
                         pushname = nzwa.contacts[sender] != undefined ? nzwa.contacts[sender].vname || nzwa.contacts[sender].notify : undefined
                         const isBadWord = isGroup ? badword.includes(from) : false
-                        const botLangs = languages
 
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))

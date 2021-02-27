@@ -104,9 +104,11 @@ Example:
 ```bash
 "ownerNumbers": "12542123926@s.whatsapp.net",
 ```
-- Change ```languages``` with your language ID
-(Coming soon)
-
+- If you Want to Change language to English, Change ```languages``` with ```eng```
+Example:
+```bash
+"languages": "eng",
+```
 - Change ```botPrefix``` with your prefix
 Example:
 ```bash
